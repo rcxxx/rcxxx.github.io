@@ -1,0 +1,308 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ubuntu-OpenCV | RCXXX</title><meta name="keywords" content="Linux,Ubuntu,OpenCV,C\C++"><meta name="author" content="rcxxx"><meta name="copyright" content="rcxxx"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="一寸秋波，千斛明珠觉未多 —— 计算机也有美丽的眼睛">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu-OpenCV">
+<meta property="og:url" content="http://rcxxx.github.io/2020/11/22/Ubuntu-OpenCV/index.html">
+<meta property="og:site_name" content="RCXXX">
+<meta property="og:description" content="一寸秋波，千斛明珠觉未多 —— 计算机也有美丽的眼睛">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/rcxxx/my-img/main/img/opencv-cover-eye.jpg">
+<meta property="article:published_time" content="2020-11-22T03:13:25.000Z">
+<meta property="article:modified_time" content="2020-11-22T07:11:11.245Z">
+<meta property="article:author" content="rcxxx">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Ubuntu">
+<meta property="article:tag" content="OpenCV">
+<meta property="article:tag" content="C\C++">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/rcxxx/my-img/main/img/opencv-cover-eye.jpg"><link rel="shortcut icon" href="/rcxxx.github.io/img/favicon.png"><link rel="canonical" href="http://rcxxx.github.io/2020/11/22/Ubuntu-OpenCV/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><link rel="stylesheet" href="/rcxxx.github.io/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/rcxxx.github.io/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-11-22 15:11:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/rcxxx.github.io/img/rcxxx-code.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/rcxxx.github.io/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/rcxxx.github.io/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/rcxxx.github.io/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/rcxxx.github.io/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-pen-nib"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/rcxxx.github.io/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page" href="/rcxxx.github.io/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/rcxxx.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-stream"></i><span> 个人</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/rcxxx.github.io/notes/"><i class="fa-fw far fa-edit"></i><span> 随笔</span></a></li><li><a class="site-page" href="/rcxxx.github.io/photos/"><i class="fa-fw fas fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page" href="/rcxxx.github.io/for-robot-team/"><i class="fa-fw fas fa-robot"></i><span> 留给机器人队</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/rcxxx.github.io/studio/"><i class="fa-fw fas fa-tools"></i><span> My Studio</span></a></div><div class="menus_item"><a class="site-page" href="/rcxxx.github.io/link/"><i class="fa-fw fas fa-suse"></i><span> My Friend</span></a></div><div class="menus_item"><a class="site-page" href="/rcxxx.github.io/about/"><i class="fa-fw fas fa-bug"></i><span> 关于</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://raw.githubusercontent.com/rcxxx/my-img/main/img/opencv-cover-eye.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/rcxxx.github.io/">RCXXX</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/rcxxx.github.io/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-pen-nib"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/rcxxx.github.io/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page" href="/rcxxx.github.io/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/rcxxx.github.io/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-stream"></i><span> 个人</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/rcxxx.github.io/notes/"><i class="fa-fw far fa-edit"></i><span> 随笔</span></a></li><li><a class="site-page" href="/rcxxx.github.io/photos/"><i class="fa-fw fas fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page" href="/rcxxx.github.io/for-robot-team/"><i class="fa-fw fas fa-robot"></i><span> 留给机器人队</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/rcxxx.github.io/studio/"><i class="fa-fw fas fa-tools"></i><span> My Studio</span></a></div><div class="menus_item"><a class="site-page" href="/rcxxx.github.io/link/"><i class="fa-fw fas fa-suse"></i><span> My Friend</span></a></div><div class="menus_item"><a class="site-page" href="/rcxxx.github.io/about/"><i class="fa-fw fas fa-bug"></i><span> 关于</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">Ubuntu-OpenCV</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-22T03:13:25.000Z" title="发表于 2020-11-22 11:13:25">2020-11-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-22T07:11:11.245Z" title="更新于 2020-11-22 15:11:11">2020-11-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/rcxxx.github.io/categories/%E6%95%99%E7%A8%8B/">教程</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>Ubuntu18.04 从源码编译 OpenCV</h1>
+<blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://opencv.org/">OpenCV官网</a></li>
+<li>构建参考<a target="_blank" rel="noopener" href="https://docs.opencv.org/4.1.0/d7/d9f/tutorial_linux_install.html">官网tutorial</a></li>
+</ul>
+</blockquote>
+<ul>
+<li>系统版本 Ubuntu18.04LTS</li>
+<li>系统硬件：
+<ul>
+<li>CPU：</li>
+<li>GPU：</li>
+</ul>
+</li>
+<li>OpenCV：4.1.0</li>
+<li>GCC：7.5.0</li>
+<li>CMake：</li>
+</ul>
+<h4 id="仅编译CPU版本"><a class="header-anchor" href="#仅编译CPU版本">¶</a><a href="#%E4%BB%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91opencv%E4%BB%85cpu">仅编译CPU版本</a></h4>
+<ul>
+<li>如果你的设备没有独立显卡，或者是不需要开启GPU加速</li>
+</ul>
+<h4 id="开启GPU支持"><a class="header-anchor" href="#开启GPU支持">¶</a><a href="#%E4%BB%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91opencv%E5%BC%80%E5%90%AFgpu%E5%8A%A0%E9%80%9F">开启GPU支持</a></h4>
+<ul>
+<li>OpenCV支持使用GPU进行加速运算，如果你的设备使用NVIDAI的独立显卡，并且需要开启GPU支持，则可参考进行配置</li>
+</ul>
+<h4 id="从源码编译OpenCV——仅CPU"><a class="header-anchor" href="#从源码编译OpenCV——仅CPU">¶</a>从源码编译OpenCV——仅CPU</h4>
+<ul>
+<li>安装 <strong>必须的包</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br><span class="line">sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev</span><br><span class="line">sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong><code>libjasper-dev</code></strong> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository <span class="string">&quot;deb http://security.ubuntu.com/ubuntu xenial-security main&quot;</span></span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install libjasper-dev</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="获取-OpenCV-源码-——-有两种方式"><a class="header-anchor" href="#获取-OpenCV-源码-——-有两种方式">¶</a>获取 <strong><code>OpenCV</code></strong> 源码 —— 有两种方式</h5>
+<ul>
+<li><strong><code>git Clone</code></strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/&lt;my_working_directory&gt;</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/opencv/opencv.git</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/opencv/opencv_contrib.git</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/opencv/opencv_extra.git</span><br></pre></td></tr></table></figure>
+<ul>
+<li>然后分别 <strong><code>cd</code></strong> 到目录中 <strong><code>git checkout &lt;branches&gt;</code></strong></li>
+<li>这里如果选择通过 <strong><code>git</code></strong> 下载，编译的时候则需要注意设置 <strong><code>cmake</code></strong> 参数的路径</li>
+</ul>
+</li>
+<li>从官网下载压缩包
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv/releases/tag/4.1.0"><strong><code>opencv-4.1.0</code></strong></a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv_contrib/releases/tag/4.1.0"><strong><code>opencv_contrib-4.1.0</code></strong></a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv_extra/releases/tag/4.1.0"><strong><code>opencv_extra-4.1.0</code></strong></a></li>
+</ul>
+</li>
+<li>这里选择第二种方式，下载完成后将 <strong><code>opencv</code></strong> 解压至自己的工作目录,<strong><code>opencv_contrib</code></strong> 解压至 <strong><code>opencv</code></strong> 的目录中
+<ul>
+<li>示例</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf opencv-4.1.0.tar.gz ~/workspace/</span><br><span class="line">tar zxvf opencv_contrib-4.1.0.tar.gz ~/workspace/opencv-4.1.0/</span><br><span class="line">tar zxvf opencv_extra-4.1.0.tar.gz ~/workspace/opencv-4.1.0/</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="编译"><a class="header-anchor" href="#编译">¶</a>编译</h5>
+<ul>
+<li>
+<p>新建 <strong><code>build/</code></strong> 目录存放编译生成的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/opencv-4.1.0/</span><br><span class="line">mkdir build</span><br><span class="line"><span class="built_in">cd</span> build</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>配置 <strong><code>cmake</code></strong> 参数，修改 <strong><code>testdata</code></strong> 和 <strong><code>contrib</code></strong> 的路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_BUILD_TYPE=Release \</span><br><span class="line">      -DOPENCV_TEST_DATA_PATH=../opencv_extra-4.1.0/testdata \</span><br><span class="line">      -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-4.1.0/modules \</span><br><span class="line">      -DCMAKE_INSTALL_PREFIX=/usr/<span class="built_in">local</span> ..</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>等待 <strong><code>makefile</code></strong> 生成完毕后开始编译 —— 过程保持网络通常，有一些包需要下载</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NUM_CPU=$(nproc)</span><br><span class="line">make -j$((<span class="variable">$NUM_CPU</span> - <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>可以去泡壶茶然后休息一下，看看番，编译速度取决于CPU</li>
+<li><a target="_blank" rel="noopener" href="https://space.bilibili.com/483818980">可以看看这里的视频</a> —— 不是广告</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p><strong><code>sudo make install</code></strong></p>
+<ul>
+<li>这一步将编译好的 <strong><code>.so</code></strong> 文件以及头文件安装到 <strong><code>/usr/local</code></strong> 目录下</li>
+</ul>
+</li>
+</ul>
+<h5 id="编译完成，将-OpenCV-添加到环境变量"><a class="header-anchor" href="#编译完成，将-OpenCV-添加到环境变量">¶</a>编译完成，将 <strong><code>OpenCV</code></strong> 添加到环境变量</h5>
+<ul>
+<li><strong><code>sudo gedit /etc/ld.so.conf.d/opencv.conf</code></strong></li>
+<li>打开 <strong><code>opencv.conf</code></strong> 在其中添加 <strong><code>/usr/local/lib</code></strong><br>
+<img src="/rcxxx.github.io/2020/11/22/Ubuntu-OpenCV/opencv-conf.png" alt></li>
+<li><strong><code>sudo gedit /etc/bash.bashrc</code></strong></li>
+<li>打开 <strong><code>bash.bashrc</code></strong> 在最后面添加</li>
+</ul>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PKG_CONFIG_PATH=<span class="variable">$PKG_CONFIG_PATH</span>:/usr/<span class="built_in">local</span>/lib/pkgconfig </span><br><span class="line"><span class="built_in">export</span> PKG_CONFIG_PATH</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong><code>sudo ldconfig</code></strong></li>
+</ul>
+<h5 id="测试"><a class="header-anchor" href="#测试">¶</a>测试</h5>
+<ul>
+<li>新建一个终端<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/opencv-4.1.0/samples/cpp/example_cmake/</span><br><span class="line">cmake .</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+<ul>
+<li>当前目录下会生成一个 <strong><code>example</code></strong></li>
+</ul>
+</li>
+<li>接入摄像头然后 <strong><code>./example</code></strong></li>
+<li>成功启动相机并显示 <strong><code>Hello OpenCV</code></strong> 字样</li>
+<li>如果你没有摄像头</li>
+</ul>
+<blockquote>
+<ul>
+<li>没有摄像头还玩什么OpenCV，洗洗睡吧</li>
+</ul>
+</blockquote>
+<h5 id="编译完成"><a class="header-anchor" href="#编译完成">¶</a>编译完成</h5>
+<h5 id="从源码编译OpenCV——开启GPU加速"><a class="header-anchor" href="#从源码编译OpenCV——开启GPU加速">¶</a>从源码编译OpenCV——开启GPU加速</h5>
+<ul>
+<li><a href="#%E8%8E%B7%E5%8F%96-opencv-%E6%BA%90%E7%A0%81--%E6%9C%89%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F">获取源码</a></li>
+</ul>
+<h5 id="安装所需依赖"><a class="header-anchor" href="#安装所需依赖">¶</a>安装所需依赖</h5>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install build-essential</span><br><span class="line">sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev</span><br><span class="line">sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong><code>libjasper-dev</code></strong> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository <span class="string">&quot;deb http://security.ubuntu.com/ubuntu xenial-security main&quot;</span></span><br><span class="line">sudo apt update</span><br><span class="line">sudo apt install libjasper-dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><strong>开启GPU支持还需要安装这些</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install \</span><br><span class="line">  libglew-dev \</span><br><span class="line">  zlib1g-dev \</span><br><span class="line">  libavutil-dev \</span><br><span class="line">  libpostproc-dev \</span><br><span class="line">  libeigen3-dev</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="编译-v2"><a class="header-anchor" href="#编译-v2">¶</a>编译</h5>
+<ul>
+<li>新建 <strong><code>build/</code></strong> 目录存放编译生成的文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/workspace/opencv-4.1.0/</span><br><span class="line">mkdir build</span><br><span class="line"><span class="built_in">cd</span> build</span><br></pre></td></tr></table></figure>
+</li>
+<li>配置 <strong><code>cmake</code></strong> 参数，修改 <strong><code>testdata</code></strong> 和 <strong><code>contrib</code></strong> 的路径<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">cmake \</span><br><span class="line">  -DCMAKE_BUILD_TYPE=Release \</span><br><span class="line">  -DCMAKE_INSTALL_PREFIX=/usr/<span class="built_in">local</span> \</span><br><span class="line">  -DBUILD_PNG=OFF \</span><br><span class="line">  -DBUILD_TIFF=OFF \</span><br><span class="line">  -DBUILD_TBB=OFF \</span><br><span class="line">  -DBUILD_JPEG=OFF \</span><br><span class="line">  -DBUILD_JASPER=OFF \</span><br><span class="line">  -DBUILD_ZLIB=OFF \</span><br><span class="line">  -DBUILD_EXAMPLES=ON \</span><br><span class="line">  -DBUILD_opencv_python2=OFF \</span><br><span class="line">  -DBUILD_opencv_python3=ON \</span><br><span class="line">  -DBUILD_opencv_cudacodec=OFF \</span><br><span class="line">  -DWITH_OPENCL=OFF \</span><br><span class="line">  -DWITH_OPENMP=OFF \</span><br><span class="line">  -DWITH_FFMPEG=ON \</span><br><span class="line">  -DWITH_GSTREAMER=OFF \</span><br><span class="line">  -DWITH_GSTREAMER_0_10=OFF \</span><br><span class="line">  -DWITH_CUDA=ON \</span><br><span class="line">  -DWITH_TBB=ON \</span><br><span class="line">  -DWITH_GTK=ON \</span><br><span class="line">  -DWITH_VTK=OFF \</span><br><span class="line">  -DWITH_1394=OFF \</span><br><span class="line">  -DWITH_OPENEXR=OFF \</span><br><span class="line">  -DCUDA_TOOLKIT_ROOT_DIR=/usr/<span class="built_in">local</span>/cuda-10.1 \</span><br><span class="line">  -DCUDA_ARCH_PTX=<span class="string">&quot;&quot;</span> \</span><br><span class="line">  -DINSTALL_C_EXAMPLES=OFF \</span><br><span class="line">  -DINSTALL_TESTS=OFF \</span><br><span class="line">  -DOPENCV_TEST_DATA_PATH=../opencv_extra-4.1.0/testdata \</span><br><span class="line">  -DOPENCV_EXTRA_MODULES_PATH=../opencv_contrib-4.1.0/modules \</span><br><span class="line">  -DOPENCV_GENERATE_PKGCONFIG=YES \</span><br><span class="line">   ..</span><br></pre></td></tr></table></figure>
+</li>
+<li>等待 <strong><code>makefile</code></strong> 生成完毕后开始编译 —— 过程保持网络通常，有一些包需要下载<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NUM_CPU=$(nproc)</span><br><span class="line">make -j$((<span class="variable">$NUM_CPU</span> - <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>这里编译时间更久，你可以叫几个朋友一起喝茶 (= =!)</li>
+</ul>
+</blockquote>
+</li>
+<li><strong><code>sudo make install</code></strong> 编译完成后安装</li>
+</ul>
+<h5 id="添加环境变量"><a class="header-anchor" href="#添加环境变量">¶</a><a href="#%E7%BC%96%E8%AF%91%E5%AE%8C%E6%88%90%E5%B0%86-opencv-%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F">添加环境变量</a></h5>
+<h5 id="测试GPU支持"><a class="header-anchor" href="#测试GPU支持">¶</a>测试GPU支持</h5>
+<ul>
+<li>代填</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">rcxxx</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://rcxxx.github.io/2020/11/22/Ubuntu-OpenCV/">http://rcxxx.github.io/2020/11/22/Ubuntu-OpenCV/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://rcxxx.github.io" target="_blank">RCXXX</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/rcxxx.github.io/tags/Linux/">Linux</a><a class="post-meta__tags" href="/rcxxx.github.io/tags/Ubuntu/">Ubuntu</a><a class="post-meta__tags" href="/rcxxx.github.io/tags/OpenCV/">OpenCV</a><a class="post-meta__tags" href="/rcxxx.github.io/tags/C-C/">C\C++</a></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/rcxxx/my-img/main/img/opencv-cover-eye.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/rcxxx.github.io/2020/11/21/Linux%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"><img class="next-cover" src="https://raw.githubusercontent.com/rcxxx/my-img/main/img/ubuntu-02.jpg" onerror="onerror=null;src='/rcxxx.github.io/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">📌Linux常用操作</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/rcxxx.github.io/2020/11/21/Linux常用操作/" title="📌Linux常用操作"><img class="cover" src="https://raw.githubusercontent.com/rcxxx/my-img/main/img/ubuntu-02.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-21</div><div class="title">📌Linux常用操作</div></div></a></div><div><a href="/rcxxx.github.io/2020/11/21/Ubuntu18-04-Start/" title="🐧Ubuntu18.04安装与开发环境配置"><img class="cover" src="https://raw.githubusercontent.com/rcxxx/my-img/main/img/ubuntu.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-21</div><div class="title">🐧Ubuntu18.04安装与开发环境配置</div></div></a></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/rcxxx.github.io/img/rcxxx-code.png" onerror="this.onerror=null;this.src='/rcxxx.github.io/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">rcxxx</div><div class="author-info__description">博观而约取 厚积而薄发</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/rcxxx.github.io/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/rcxxx.github.io/tags/"><div class="headline">标签</div><div class="length-num">10</div></a></div><div class="card-info-data-item is-center"><a href="/rcxxx.github.io/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/rcxxx"><i class="fab fa-github-square"></i><span>My Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/rcxxx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:chuangxinr@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://steamcommunity.com/profiles/76561198414691020/" target="_blank" title="steam"><i class="fab fa-steam"></i></a><a class="social-icon" href="https://space.bilibili.com/483818980" target="_blank" title="studio-bilibili"><i class="fas fa-ghost"></i></a><a class="social-icon" href="https://space.bilibili.com/373512714/" target="_blank" title="my-bilibili"><i class="far fa-thumbs-up"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content"></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">Ubuntu18.04 从源码编译 OpenCV</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%85%E7%BC%96%E8%AF%91CPU%E7%89%88%E6%9C%AC"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">仅编译CPU版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%80%E5%90%AFGPU%E6%94%AF%E6%8C%81"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">开启GPU支持</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91OpenCV%E2%80%94%E2%80%94%E4%BB%85CPU"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">从源码编译OpenCV——仅CPU</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96-OpenCV-%E6%BA%90%E7%A0%81-%E2%80%94%E2%80%94-%E6%9C%89%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F"><span class="toc-number">1.0.0.3.1.</span> <span class="toc-text">获取 OpenCV 源码 —— 有两种方式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%96%E8%AF%91"><span class="toc-number">1.0.0.3.2.</span> <span class="toc-text">编译</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%AE%8C%E6%88%90%EF%BC%8C%E5%B0%86-OpenCV-%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">1.0.0.3.3.</span> <span class="toc-text">编译完成，将 OpenCV 添加到环境变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-number">1.0.0.3.4.</span> <span class="toc-text">测试</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E5%AE%8C%E6%88%90"><span class="toc-number">1.0.0.3.5.</span> <span class="toc-text">编译完成</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BB%8E%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91OpenCV%E2%80%94%E2%80%94%E5%BC%80%E5%90%AFGPU%E5%8A%A0%E9%80%9F"><span class="toc-number">1.0.0.3.6.</span> <span class="toc-text">从源码编译OpenCV——开启GPU加速</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%89%80%E9%9C%80%E4%BE%9D%E8%B5%96"><span class="toc-number">1.0.0.3.7.</span> <span class="toc-text">安装所需依赖</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%BC%96%E8%AF%91-v2"><span class="toc-number">1.0.0.3.8.</span> <span class="toc-text">编译</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">1.0.0.3.9.</span> <span class="toc-text">添加环境变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95GPU%E6%94%AF%E6%8C%81"><span class="toc-number">1.0.0.3.10.</span> <span class="toc-text">测试GPU支持</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/rcxxx.github.io/2020/11/22/Ubuntu-OpenCV/" title="Ubuntu-OpenCV"><img src="https://raw.githubusercontent.com/rcxxx/my-img/main/img/opencv-cover-eye.jpg" onerror="this.onerror=null;this.src='/rcxxx.github.io/img/404.jpg'" alt="Ubuntu-OpenCV"/></a><div class="content"><a class="title" href="/rcxxx.github.io/2020/11/22/Ubuntu-OpenCV/" title="Ubuntu-OpenCV">Ubuntu-OpenCV</a><time datetime="2020-11-22T03:13:25.000Z" title="发表于 2020-11-22 11:13:25">2020-11-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/rcxxx.github.io/2020/11/21/Linux%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" title="📌Linux常用操作"><img src="https://raw.githubusercontent.com/rcxxx/my-img/main/img/ubuntu-02.jpg" onerror="this.onerror=null;this.src='/rcxxx.github.io/img/404.jpg'" alt="📌Linux常用操作"/></a><div class="content"><a class="title" href="/rcxxx.github.io/2020/11/21/Linux%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/" title="📌Linux常用操作">📌Linux常用操作</a><time datetime="2020-11-21T08:11:14.000Z" title="发表于 2020-11-21 16:11:14">2020-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/rcxxx.github.io/2020/11/21/Ubuntu18-04-Start/" title="🐧Ubuntu18.04安装与开发环境配置"><img src="https://raw.githubusercontent.com/rcxxx/my-img/main/img/ubuntu.jpg" onerror="this.onerror=null;this.src='/rcxxx.github.io/img/404.jpg'" alt="🐧Ubuntu18.04安装与开发环境配置"/></a><div class="content"><a class="title" href="/rcxxx.github.io/2020/11/21/Ubuntu18-04-Start/" title="🐧Ubuntu18.04安装与开发环境配置">🐧Ubuntu18.04安装与开发环境配置</a><time datetime="2020-11-20T16:00:00.000Z" title="发表于 2020-11-21 00:00:00">2020-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/rcxxx.github.io/2020/11/21/VSCode-config/" title="✒️最终你一定会爱上VSCode"><img src="https://raw.githubusercontent.com/rcxxx/my-img/main/img/vscode-01.png" onerror="this.onerror=null;this.src='/rcxxx.github.io/img/404.jpg'" alt="✒️最终你一定会爱上VSCode"/></a><div class="content"><a class="title" href="/rcxxx.github.io/2020/11/21/VSCode-config/" title="✒️最终你一定会爱上VSCode">✒️最终你一定会爱上VSCode</a><time datetime="2020-11-20T16:00:00.000Z" title="发表于 2020-11-21 00:00:00">2020-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/rcxxx.github.io/2020/11/20/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/" title="👀用hexo+Github部署个人博客"><img src="https://raw.githubusercontent.com/rcxxx/my-img/main/img/star-01-2k.png" onerror="this.onerror=null;this.src='/rcxxx.github.io/img/404.jpg'" alt="👀用hexo+Github部署个人博客"/></a><div class="content"><a class="title" href="/rcxxx.github.io/2020/11/20/%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/" title="👀用hexo+Github部署个人博客">👀用hexo+Github部署个人博客</a><time datetime="2020-11-19T16:00:00.000Z" title="发表于 2020-11-20 00:00:00">2020-11-20</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By rcxxx</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">最忌讳的事，就是想得太多，做得太少</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/rcxxx.github.io/js/utils.js"></script><script src="/rcxxx.github.io/js/main.js"></script><script src="/rcxxx.github.io/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script>(function(){
+  const bp = document.createElement('script');
+  const curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https'){
+  bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  bp.dataset.pjax = ''
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})()</script></div></body></html>
