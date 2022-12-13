@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[9124],{18632:a=>{a.exports=JSON.parse('{"title":"\ud83c\udfae \u5c31\u77e5\u9053\u73a9","slug":"/category/just-paly","permalink":"/docs/category/just-paly","navigation":{"next":{"title":"\u9633\u5149\u5b85\u7537","permalink":"/docs/life/play/go-out-and-play"}}}')}}]);

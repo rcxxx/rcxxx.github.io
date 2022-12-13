@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://sinnammanyo.cn/blog</id>
+    <title>Rcxxx's Personal Site Blog</title>
+    <updated>2022-12-13T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://sinnammanyo.cn/blog"/>
+    <subtitle>Rcxxx's Personal Site Blog</subtitle>
+    <icon>https://sinnammanyo.cn/img/icons/game.png</icon>
+    <entry>
+        <title type="html"><![CDATA[从 0 构建一个自己的个人网站]]></title>
+        <id>/start</id>
+        <link href="https://sinnammanyo.cn/blog/start"/>
+        <updated>2022-12-13T00:00:00.000Z</updated>
+        <author>
+            <name>CX R</name>
+            <uri>https://github.com/rcxxx</uri>
+        </author>
+    </entry>
+</feed>

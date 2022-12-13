@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[6973],{91530:n=>{n.exports=JSON.parse('{"title":"Fusion 360","slug":"/category/Fusion 360","permalink":"/docs/category/Fusion 360","navigation":{"next":{"title":"\u9f7f\u8f6e & \u9f7f\u6761","permalink":"/docs/computer/3D-modeling/fusion360/fusion360-rack-and-pinion"}}}')}}]);

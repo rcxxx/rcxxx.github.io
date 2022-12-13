@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Rcxxx's Personal Site Blog</title>
+        <link>https://sinnammanyo.cn/blog</link>
+        <description>Rcxxx's Personal Site Blog</description>
+        <lastBuildDate>Tue, 13 Dec 2022 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>zh-Hans</language>
+        <item>
+            <title><![CDATA[从 0 构建一个自己的个人网站]]></title>
+            <link>https://sinnammanyo.cn/blog/start</link>
+            <guid>/start</guid>
+            <pubDate>Tue, 13 Dec 2022 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
