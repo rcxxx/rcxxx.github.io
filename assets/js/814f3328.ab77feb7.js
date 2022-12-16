@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[2535],{45641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\u4ece\u96f6\u642d\u5efa\u81ea\u5df1\u7684\u4e2a\u4eba\u7f51\u7ad9","permalink":"/blog/start"}]}')}}]);
