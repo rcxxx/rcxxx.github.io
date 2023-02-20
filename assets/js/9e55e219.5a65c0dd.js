@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[9593],{9775:a=>{a.exports=JSON.parse('{"label":"Clash","permalink":"/blog/tags/clash","allTagsPath":"/blog/tags","count":1}')}}]);

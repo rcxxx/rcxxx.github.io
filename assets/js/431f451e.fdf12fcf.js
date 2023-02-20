@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[3537],{57730:a=>{a.exports=JSON.parse('{"label":"SwitchyOmega","permalink":"/blog/tags/switchy-omega","allTagsPath":"/blog/tags","count":1}')}}]);
