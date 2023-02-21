@@ -4,7 +4,7 @@
         <title>Rcxxx's Personal Site Blog</title>
         <link>https://sinnammanyo.cn/blog</link>
         <description>Rcxxx's Personal Site Blog</description>
-        <lastBuildDate>Mon, 20 Feb 2023 15:39:08 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 21 Feb 2023 08:45:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-Hans</language>
@@ -12,9 +12,9 @@
             <title><![CDATA[Chrome 浏览器插件 SwitchyOmega 的使用]]></title>
             <link>https://sinnammanyo.cn/blog/2023/02/switchyomage</link>
             <guid>/2023/02/switchyomage</guid>
-            <pubDate>Mon, 20 Feb 2023 15:39:08 GMT</pubDate>
+            <pubDate>Tue, 21 Feb 2023 08:45:05 GMT</pubDate>
             <description><![CDATA[SwitchyOmega]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="highlight-color25c2a0switchyomegahighlight"><a href="https://github.com/FelisCatus/SwitchyOmega" target="_blank" rel="noopener noreferrer"><span style="background-color:#25c2a0;border-radius:5px;color:#fff;padding:0.2rem">SwitchyOmega</span></a><a class="hash-link" href="#highlight-color25c2a0switchyomegahighlight" title="标题的直接链接">​</a></h3><p><strong>一个代理设置工具，只提供浏览器的代理方式切换，不提供代理服务器</strong></p><p>简单上手</p><p><img loading="lazy" src="https://pictures-1304295136.cos.ap-guangzhou.myqcloud.com/blog/switchyomega/switchyomega.png" class="img_ev3q"></p>]]></content:encoded>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="highlight-color25c2a0switchyomegahighlight"><a href="https://github.com/FelisCatus/SwitchyOmega" target="_blank" rel="noopener noreferrer"><span style="background-color:#25c2a0;border-radius:5px;color:#fff;padding:0.2rem">SwitchyOmega</span></a><a class="hash-link" href="#highlight-color25c2a0switchyomegahighlight" title="标题的直接链接">​</a></h3><p><strong>一个代理设置工具，只提供浏览器的代理方式切换，不提供代理服务器</strong></p><p>简单易上手</p><p><img loading="lazy" src="https://pictures-1304295136.cos.ap-guangzhou.myqcloud.com/blog/switchyomega/switchyomega.png" class="img_ev3q"></p>]]></content:encoded>
             <category>SwitchyOmega</category>
             <category>Clash</category>
         </item>

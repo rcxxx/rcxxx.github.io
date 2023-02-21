@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://sinnammanyo.cn/blog</id>
     <title>Rcxxx's Personal Site Blog</title>
-    <updated>2023-02-20T15:39:08.000Z</updated>
+    <updated>2023-02-21T08:45:05.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://sinnammanyo.cn/blog"/>
     <subtitle>Rcxxx's Personal Site Blog</subtitle>
@@ -11,9 +11,9 @@
         <title type="html"><![CDATA[Chrome 浏览器插件 SwitchyOmega 的使用]]></title>
         <id>/2023/02/switchyomage</id>
         <link href="https://sinnammanyo.cn/blog/2023/02/switchyomage"/>
-        <updated>2023-02-20T15:39:08.000Z</updated>
+        <updated>2023-02-21T08:45:05.000Z</updated>
         <summary type="html"><![CDATA[SwitchyOmega]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="highlight-color25c2a0switchyomegahighlight"><a href="https://github.com/FelisCatus/SwitchyOmega" target="_blank" rel="noopener noreferrer"><span style="background-color:#25c2a0;border-radius:5px;color:#fff;padding:0.2rem">SwitchyOmega</span></a><a class="hash-link" href="#highlight-color25c2a0switchyomegahighlight" title="标题的直接链接">​</a></h3><p><strong>一个代理设置工具，只提供浏览器的代理方式切换，不提供代理服务器</strong></p><p>简单上手</p><p><img loading="lazy" src="https://pictures-1304295136.cos.ap-guangzhou.myqcloud.com/blog/switchyomega/switchyomega.png" class="img_ev3q"></p>]]></content>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="highlight-color25c2a0switchyomegahighlight"><a href="https://github.com/FelisCatus/SwitchyOmega" target="_blank" rel="noopener noreferrer"><span style="background-color:#25c2a0;border-radius:5px;color:#fff;padding:0.2rem">SwitchyOmega</span></a><a class="hash-link" href="#highlight-color25c2a0switchyomegahighlight" title="标题的直接链接">​</a></h3><p><strong>一个代理设置工具，只提供浏览器的代理方式切换，不提供代理服务器</strong></p><p>简单易上手</p><p><img loading="lazy" src="https://pictures-1304295136.cos.ap-guangzhou.myqcloud.com/blog/switchyomega/switchyomega.png" class="img_ev3q"></p>]]></content>
         <author>
             <name>CX R</name>
             <uri>https://github.com/rcxxx</uri>
