@@ -4,7 +4,7 @@
         <title>Rcxxx's Personal Site Blog</title>
         <link>https://sinnammanyo.cn/blog</link>
         <description>Rcxxx's Personal Site Blog</description>
-        <lastBuildDate>Tue, 21 Feb 2023 14:03:09 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 22 Feb 2023 07:10:29 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-Hans</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[Chrome 浏览器插件 SwitchyOmega 的使用]]></title>
             <link>https://sinnammanyo.cn/blog/2023/02/switchyomage</link>
             <guid>/2023/02/switchyomage</guid>
-            <pubDate>Tue, 21 Feb 2023 14:03:09 GMT</pubDate>
+            <pubDate>Wed, 22 Feb 2023 07:10:29 GMT</pubDate>
             <description><![CDATA[SwitchyOmega]]></description>
             <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="highlight-color25c2a0switchyomegahighlight"><a href="https://github.com/FelisCatus/SwitchyOmega" target="_blank" rel="noopener noreferrer"><span style="background-color:#25c2a0;border-radius:5px;color:#fff;padding:0.2rem">SwitchyOmega</span></a><a class="hash-link" href="#highlight-color25c2a0switchyomegahighlight" title="标题的直接链接">​</a></h3><p><strong>一个代理设置工具，只提供浏览器的代理方式切换，不提供代理服务器</strong></p><p>简单易上手</p><p><img loading="lazy" src="https://pictures-1304295136.cos.ap-guangzhou.myqcloud.com/blog/switchyomega/switchyomega.png" class="img_ev3q"></p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="代理服务器">代理服务器<a class="hash-link" href="#代理服务器" title="标题的直接链接">​</a></h3><p>······</p><p>使用插件之前，需要有一个代理服务器</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="客户端">客户端<a class="hash-link" href="#客户端" title="标题的直接链接">​</a></h3><p>例如 <strong><code>V2rayN</code></strong>、<strong><code>Clash</code></strong> 之类的客户端</p><ul><li><em><a href="https://github.com/Dreamacro/clash" target="_blank" rel="noopener noreferrer"><strong>Dreamacro/clash</strong></a></em></li><li><em><a href="https://github.com/2dust/v2rayN" target="_blank" rel="noopener noreferrer"><strong>2dust/v2rayN</strong></a></em></li></ul><p>这里以 <strong><a href="https://github.com/Fndroid/clash_for_windows_pkg" target="_blank" rel="noopener noreferrer"><code>clash_for_windows_pkg</code></a></strong> 为例，可以在仓库的 <a href="https://github.com/Fndroid/clash_for_windows_pkg/tags" target="_blank" rel="noopener noreferrer"><strong>Tag</strong></a> 发布页中下载</p><ul><li><p>General 为主页面，包含最基本的设置 —— 端口号、是否允许局域网、设置系统代理、开机自启动等
 <img loading="lazy" src="https://pictures-1304295136.cos.ap-guangzhou.myqcloud.com/blog/switchyomega/clash_for_win.png" class="img_ev3q"></p></li><li><p>proxies 为代理界面，用来切换节点，以及代理方式 —— 全局、规则、直连、脚本
