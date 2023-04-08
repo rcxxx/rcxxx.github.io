@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[8777],{48090:a=>{a.exports=JSON.parse('{"label":"YOLO","permalink":"/blog/tags/yolo","allTagsPath":"/blog/tags","count":1}')}}]);
