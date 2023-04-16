@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[3880],{6625:a=>{a.exports=JSON.parse('{"label":"Edges","permalink":"/blog/tags/edges","allTagsPath":"/blog/tags","count":1}')}}]);
