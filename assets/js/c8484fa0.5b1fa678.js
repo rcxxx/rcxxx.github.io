@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[4687],{78556:a=>{a.exports=JSON.parse('{"title":"\u2328\ufe0f Programming","slug":"/category/programming","permalink":"/stack/category/programming","navigation":{"next":{"title":"C/C++","permalink":"/stack/category/C-C_plus_plus"}}}')}}]);

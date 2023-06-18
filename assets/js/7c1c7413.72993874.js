@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[7169],{85227:e=>{e.exports=JSON.parse('{"title":"\ud83d\udd0c devices","slug":"/category/devices","permalink":"/stack/category/devices","navigation":{"next":{"title":"Jetson Nano Start","permalink":"/stack/devices/jetson-nano/jetson-nano-start"}}}')}}]);

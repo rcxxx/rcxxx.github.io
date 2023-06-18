@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[6878],{39929:s=>{s.exports=JSON.parse('{"title":"\ud83d\udce6 Tools","slug":"/category/tools","permalink":"/stack/category/tools","navigation":{"next":{"title":"vscode","permalink":"/stack/tools/vscode/about-vscode"}}}')}}]);

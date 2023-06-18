@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[4205],{99901:e=>{e.exports=JSON.parse('{"title":"\ud83d\udc40 CV","slug":"/category/cv","permalink":"/stack/category/cv","navigation":{"next":{"title":"OpenCV","permalink":"/stack/category/OpenCV"}}}')}}]);
