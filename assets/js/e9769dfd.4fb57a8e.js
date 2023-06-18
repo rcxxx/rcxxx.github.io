@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[5571],{36415:t=>{t.exports=JSON.parse('{"title":"ROS","slug":"/category/ROS","permalink":"/stack/category/ROS","navigation":{"previous":{"title":"\ud83e\udd16 Robot","permalink":"/stack/category/robot"},"next":{"title":"install","permalink":"/stack/robot/ros/ros-install"}}}')}}]);
