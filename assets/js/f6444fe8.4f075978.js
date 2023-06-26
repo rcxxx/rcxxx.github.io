@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[3177],{23426:e=>{e.exports=JSON.parse('{"title":"\ud83d\udcbb CS","slug":"/category/cs","permalink":"/stack/category/cs","navigation":{"next":{"title":"\u8ba1\u7b97\u673a\u7f51\u7edc","permalink":"/stack/category/computer-network"}}}')}}]);
