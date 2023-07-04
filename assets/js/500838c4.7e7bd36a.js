@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[9826],{62871:n=>{n.exports=JSON.parse('{"title":"Common","slug":"/category/CV-Common","permalink":"/stack/category/CV-Common","navigation":{"previous":{"title":"\ud83d\udc40 CV","permalink":"/stack/category/cv"},"next":{"title":"IOU","permalink":"/stack/cv/common/cv-common-iou"}}}')}}]);
