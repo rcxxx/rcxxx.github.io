@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[1715],{7716:e=>{e.exports=JSON.parse('{"title":"\ud83d\udc40 CV","slug":"/category/cv","permalink":"/stack/category/cv","navigation":{"next":{"title":"\ud83c\udfaf Object Detection","permalink":"/stack/category/CV-object-detection"}}}')}}]);
