@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwiki_rcxxx_docusaurus=self.webpackChunkwiki_rcxxx_docusaurus||[]).push([[8947],{6600:u=>{u.exports=JSON.parse('{"authors":[{"name":"CX R","title":" ","url":"https://github.com/rcxxx","imageURL":"https://github.com/rcxxx.png","key":"rcxxx","page":null,"count":1}]}')}}]);

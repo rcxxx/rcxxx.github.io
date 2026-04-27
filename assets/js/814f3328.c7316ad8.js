@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwiki_rcxxx_docusaurus=self.webpackChunkwiki_rcxxx_docusaurus||[]).push([[7472],{5513:s=>{s.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\u4ece\u96f6\u642d\u5efa\u81ea\u5df1\u7684\u4e2a\u4eba\u7f51\u7ad9","permalink":"/wiki/blog/start","unlisted":false,"date":"2022-12-13T00:00:00.000Z"}]}')}}]);
