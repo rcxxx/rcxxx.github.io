@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwiki_rcxxx_docusaurus=self.webpackChunkwiki_rcxxx_docusaurus||[]).push([[5279],{2495:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/wiki/blog","page":1,"postsPerPage":1,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

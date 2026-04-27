@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwiki_rcxxx_docusaurus=self.webpackChunkwiki_rcxxx_docusaurus||[]).push([[8716],{8716:(c,e,s)=>{s.d(e,{createPacketServices:()=>u.$});var u=s(9811);s(8198)}}]);

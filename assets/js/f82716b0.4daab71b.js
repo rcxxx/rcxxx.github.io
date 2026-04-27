@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksinnammanyo_cn=self.webpackChunksinnammanyo_cn||[]).push([[4602],{53449:n=>{n.exports=JSON.parse('{"label":"OpenCV-Contrib","permalink":"/blog/tags/open-cv-contrib","allTagsPath":"/blog/tags","count":1}')}}]);
